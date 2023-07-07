@@ -1,0 +1,56 @@
+.form-container {
+  display: flex;
+  font-family: "myfont";
+  justify-content: flex-start;
+  margin: 80px auto 20px;
+  max-width: 650px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  padding-left: 50px;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 25px;
+  padding-bottom: 25px;
+}
+
+h1 {
+  color: rgb(36, 37, 37);
+  margin: 0;
+  margin-top: 25px;
+}
+
+h2 {
+  color: rgb(36, 37, 37);
+  margin: 0;
+}
+
+input {
+  border: 1px solid #ccc;
+  max-width: 550px;
+  height: 50px;
+}
+
+textarea {
+  max-width: 550px;
+  height: 100px;
+}
+
+button {
+  max-width: 550px;
+  height: 50px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+
+button:hover {
+  max-width: 550px;
+  height: 50px;
+  border: 1px solid #1899d6;
+  background-color: #1899d6;
+  font-weight: bold;
+}

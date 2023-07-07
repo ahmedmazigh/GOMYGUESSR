@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "myfont";
+  src: url("KonnectExtraBold.otf");
+}
+
+body {
+  background-color: rgb(36, 37, 37);
+  font-family: "myfont";
+  margin: 0;
+}
+
+main {
+  margin-bottom: 20px;
+}
+/*/////////VICTORY SCREEN///////////*/
+
+.victory {
+  top: 0;
+  background-color: rgba(64, 161, 97, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  backdrop-filter: blur(15px);
+  z-index: 3;
+}
+
+.victory .container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* border-style: solid;
+  border-color: red;
+  border-radius: 10px; */
+  text-align: center;
+}
+
+.container h1 {
+  color: white;
+  font-size: 60px;
+}
+
+/*/ /////// HEADER /////////*/
+header {
+  z-index: 2;
+  background-color: rgba(36, 37, 37, 0.23);
+
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5%;
+  padding: 25px;
+  position: sticky;
+  top: 0;
+}
+
+header a {
+  margin: 10px auto 20px;
+}
+
+header img {
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* SELECT MENU */
+.select-menu {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  margin: 40px auto 20px; /*TOP LEFT/RIGHT BOTTOM*/
+  padding: 10px 20px 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px 7px rgba(0, 0, 0, 0.3);
+}
+
+.select-menu h1 {
+  /* color: rgb(199, 192, 181); */
+  text-align: center;
+}
+
+.level-list {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.level {
+  background-color: transparent;
+  margin: 20px 40px 20px;
+  padding: 2px 30px 2px;
+  /* border-style: solid; */
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+.level p {
+  text-align: center;
+  color: #e50914;
+}
+
+.level:hover {
+  box-shadow: 0px 0px 14px 7px rgb(63, 149, 230, 0.25);
+  transform: scale(1.3);
+}
+
+/* GAME CONTAINER */
+.game-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  margin: 40px auto 20px; /*TOP LEFT/RIGHT BOTTOM*/
+  padding: 10px 20px 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px 7px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* GAME SCORING DISPLAY */
+.game-scoring {
+  /* margin-inline: 200px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.game-scoring h1 {
+  color: #e50914;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* CARD BOARD */
+
+.game-board {
+  margin: 40px auto 20px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #1cb0f6;
+  margin: 20px 40px 20px;
+  /* border-style: solid; */
+  border-radius: 10px;
+  width: 140px;
+  height: 200px;
+  user-select: none;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.back,
+.front {
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  backface-visibility: hidden;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card .front {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.hide {
+  opacity: 0;
+}
+.hidden {
+  display: none;
+}
+
+.show-animation {
+  animation-name: transition;
+  animation-duration: 1s;
+}
+
+@keyframes transition {
+  from {
+    transform: translateY(1000%);
+  }
+  to {
+    transform: translateY(0);
+    transition: all 1s;
+    transition-duration: 0.5s;
+  }
+}

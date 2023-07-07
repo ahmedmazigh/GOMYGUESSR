@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "myfont";
+  src: url("KonnectExtraBold.otf");
+}
+
+body {
+  margin: 0;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  margin: 100px;
+  font-family: "myfont";
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  align-items: center;
+  width: 400px;
+  height: 700px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.card-container img {
+  padding-top: 10px;
+  height: 300px;
+}
+
+p {
+  padding: 10px;
+  height: 400px;
+}
+h1 {
+  height: 55px;
+}
+.hidden {
+  opacity: 0;
+}
+
+.anim-transition {
+  animation-name: transition;
+  animation-duration: 1s;
+}
+
+@keyframes transition {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(500%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s ease-in-out;
+    transition-duration: 2s;
+    transition-delay: 1s;
+  }
+}

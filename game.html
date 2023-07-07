@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GoMyGuessr - Card Game</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="bouton.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- LOGO IMAGE -->
+      <a href="GoMyGuessr.html"
+        ><img src="logo.png" href="GoMyGuessr.html"
+      /></a>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <!-- SELECT MENU -->
+      <div class="select-menu">
+        <h1>Select Difficulty</h1>
+        <div class="level-list">
+          <div class="level" id="easy">
+            <h2>Easy</h2>
+            <p>x8 cards</p>
+          </div>
+          <div class="level" id="medium">
+            <h2>Medium</h2>
+            <p>x12 cards</p>
+          </div>
+          <div class="level" id="hard">
+            <h2>Hard</h2>
+            <p>x20 cards</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD GAME -->
+      <div class="game-container hidden">
+        <div class="game-scoring">
+          <h1>Moves: <span class="game-moves"></span></h1>
+          <h1>Timer: <span class="game-timer"></span></h1>
+          <h1>Score: <span class="game-score"></span></h1>
+          <a href="" class="bouton-restart">Restart</a>
+        </div>
+        <div class="game-board"></div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer></footer>
+    <script src="game.js"></script>
+  </body>
+</html>

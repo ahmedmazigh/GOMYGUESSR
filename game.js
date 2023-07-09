@@ -242,7 +242,7 @@ function chooseDifficulty() {
 
 function click_audio() {
   let audio = document.createElement("audio");
-  audio.src = "pick.wav";
+  audio.src = "sounds/pick.wav";
   // audio.addEventListener(
   //   "ended",
   //   function () {
@@ -255,7 +255,7 @@ function click_audio() {
 
 function correct_audio() {
   let audio = document.createElement("audio");
-  audio.src = "correct.wav";
+  audio.src = "sounds/correct.wav";
   // audio.addEventListener(
   //   "ended",
   //   function () {
@@ -268,7 +268,7 @@ function correct_audio() {
 
 function card_audio() {
   let audio = document.createElement("audio");
-  audio.src = "card_sound.mp3";
+  audio.src = "sounds/card_sound.mp3";
   // audio.addEventListener(
   //   "ended",
   //   function () {
